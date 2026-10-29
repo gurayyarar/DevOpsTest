@@ -1,0 +1,12 @@
+server {
+    listen 80;
+
+    location /health {
+        return 200 "ok\n";
+    }
+
+    location / {
+        default_type text/plain;
+        return 200 "EvetSync demo v1 - APP_ENV=${APP_ENV}\n";
+    }
+}
